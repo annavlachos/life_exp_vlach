@@ -1,0 +1,13 @@
+---
+title: "Life Expectancy Analysis"
+author: "Anna Vlachos"
+date: "January 16, 2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#Abstract
+Here we will examine
