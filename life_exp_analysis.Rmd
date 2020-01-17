@@ -6,16 +6,23 @@ output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
+library(gapminder)
+library(tidyverse)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 #Abstract
 Here we will reproduce the famous plot from Oeppen and Vaupel (2002). 
 
-#Analysis
+#Life Expectancy Analysis
 
 Here we begin the analysis.
+
 ```{r}
-print("Analysis")
+gapminder_unfiltered %>%
+  select(country, year, lifeExp) %>%
+  group_by(year) %>%     #within each year
+  filter(lifeExp == max(lifeExp)) %>%   ##max life expectancy per each year
+  arrange(year)
 ```
 
